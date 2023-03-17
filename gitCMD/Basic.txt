@@ -1,0 +1,23 @@
+Web application - it cross platform
+server - someone is going to provide you the service
+server - it is also one system that is running 24/7
+HTML:hyper text markup language 
+language - set of rules. we need to follow that rules.
+markup - <>
+text - information 
+hyper - link - that is connecting from one page to another page. 
+html - it is use to display the content 
+===============================================
+CSS - Cascading style sheet 
+sheet - group of design together 
+style - applying some cosmetics to content of the page 
+Cascading - programming name
+css - it is use to do the presentation.
+html and css are going to work together.
+===============================================
+HTML is used to structure the web page 
+CSS is used to presentation of  the web  page 
+javascript - it is used to make web page dynamic.
+Web developer - html,css,javascript
+===============================================
+
