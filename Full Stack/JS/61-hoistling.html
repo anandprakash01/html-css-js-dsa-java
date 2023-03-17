@@ -1,0 +1,15 @@
+<script>
+    //we we call the fun before concept is called hoisting concept
+    console.log(addition(3,3));//this will not give error
+    function addition(a,b){
+        return a+b;
+    }
+    console.log(addition(3,3));
+</script>
+
+<script>
+    // console.log(subtraction(3,4));//this will give error
+    const subtraction = (a,b)=>{
+           return a-b;
+       }
+</script>

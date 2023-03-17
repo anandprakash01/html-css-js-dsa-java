@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Table</title>
+    <style>
+        .container{
+            display: table;
+            margin: 30px auto;
+            border: 3px dotted rgb(255, 0, 200);
+            
+        }
+        .row{
+            display: table-row;
+            /* padding: 10px; // it will not work here */
+            /* margin: 20px; // it will not work here */
+        }
+        .col{
+            display: table-cell;
+            /* margin: 20px; // it will not work here */
+            padding: 15px;
+            /* border: 3px solid green; */
+            border-top: 2px solid green;
+            border-right: 2px solid red;
+            border-left: 2px solid yellow;
+            border-bottom: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">Name</div>
+            <div class="col">ID</div>
+            <div class="col">DOB</div>
+        </div>
+        <div class="row">
+            <div class="col">Anand</div>
+            <div class="col">45</div>
+            <div class="col">01/01/1998</div>
+        </div>
+        <div class="row">
+            <div class="col">Anand</div>
+            <div class="col">45</div>
+            <div class="col">01/10/1998</div>
+        </div>
+    </div>
+</body>
+</html>

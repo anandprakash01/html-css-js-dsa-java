@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders | Backgrounds</title>
+
+    <style>
+        #first{
+            background-color: blue;
+            color: white;
+            height: 200px;
+            width: 500px;
+            /* border-width: 5px;
+            border-style: solid;
+            border-color: green; */
+            border:5px solid green;
+            
+            border-radius: 10px;
+        }
+        #second{
+            background-color: rgb(58, 0, 0);
+            color:yellow;
+            height:100px;
+            width:500px;
+            border-top:5px solid red;
+            border-right: 5px solid blue;
+            border-left: 5px solid hotpink;
+            border-bottom: 5px solid purple;
+
+            border-top-right-radius:10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 20px;
+        }
+        #third{
+            height: 500px;
+            width: 500px;
+            background-image: url('hr.jpg');
+            border: 5px solid red;
+
+            background-size: 250px;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: no-repeat;
+            
+            background-position: top right;
+            background-position: top center;
+            background-position: center right;
+            background-position: 200px 50px;
+            /* (x,y) */
+            background-position: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Height | Width | Border | Background</h1>
+    <p><h2>The height and width properties may have the following values:</h2></p>
+
+    <p id="first">auto - This is default. The browser calculates the height and width</p>
+
+    <p id="second">length - Defines the height/width in px, cm, etc.</p>
+
+    <p id="third">% - Defines the height/width in percent of the containing block</p>
+
+    <p>initial - Sets the height/width to its default value</p>
+
+    <p>inherit - The height/width will be inherited from its parent value</p>
+
+</body>
+</html>

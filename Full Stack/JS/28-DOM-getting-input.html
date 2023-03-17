@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <head>
+        <style>
+            .box {
+                border: 5px solid black;
+                text-align: center;
+                font-size: 40px;
+                width: 500px;
+                height: 200px;
+            }
+        </style>
+
+    </head>
+
+<body>
+    Description: <input type="text" id="descriptionProps" />
+    Background Color: <input type="text" id="colorProps" />
+
+    <button onClick="onSubmit()">click here</button>
+
+    <div class="box" id="demo"></div>
+</body>
+<script>
+    function onSubmit() {
+        var discription = document.getElementById("descriptionProps").value;
+        var color = document.getElementById("colorProps").value;
+        var box = document.getElementById("demo");
+        box.innerHTML = discription;
+        box.style.backgroundColor=color;
+    }
+
+</script>
+
+</html>

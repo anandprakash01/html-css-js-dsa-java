@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo class</title>
+    <style>
+        /* basic */
+        .fcs:focus{
+            border:5px solid green;
+        }
+        .req:required{
+            border: 5px solid red;
+        }
+        /* anchor tag */
+        a:link{
+            color:brown;
+        }
+        a:visited{
+            color: yellow;
+        }
+        a:hover{
+            color:aqua;
+        }
+        a:active{
+            color: orange;
+        }
+        /* general */
+        ol li:first-child{
+            color: rgb(255, 151, 151);
+        }
+
+        /* ul li:nth-child(2n){
+            color: green;
+        } */
+        /* ul li:nth-child(2n+1){
+            color: green;
+        } */
+        /* ul li:nth-child(n){
+            color: green;
+        } */
+        /* ul li:nth-child(3){
+            color: green;
+        } */
+
+        /* ul li:nth-last-child(2){
+            color: red;
+        } */
+
+        ul li:nth-of-type(2n){
+            color: darkorange;
+        }
+        /* compare between nth child and nth of type */
+        p:nth-child(2){
+            color: blue;
+        }
+        p:nth-of-type(2){
+            color:rebeccapurple;
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="text" class="fcs" name="general"><br/><br/>
+    <input type="text" class="req" name="general" required><br/><br/>
+    <input type="text" class="req" name="general"><br/>
+    <a href="https://www.google.com">Google</a>
+    <a href="https://www.linkedin.com/in/hranand/">LinkedIn</a>
+
+    <ol>
+        <li>Pen</li>
+        <li>Pencil</li>
+        <li>scale</li>
+    </ol>
+    <ul>
+        <li>Mobile</li>
+        <li>Laptop</li>
+        <li>Tablet</li>
+        <li>Smart Watch</li>
+    </ul>
+
+    <section>
+        <h1>Words</h1>
+        <p>Little</p>
+        <p>Piggy</p>    
+     </section>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator Selector</title>
+    <style>
+        /* Types of combinator selector */
+        /* 1-Decendent */
+        .div-1 p {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* 2-Child */
+        .div-2>p {
+            color: red;
+        }
+
+        /* 3-Adjacents sibling */
+        section+p {
+            color: blue;
+            font-style: italic;
+            font-weight: 1000;
+        }
+
+        /* General siblings */
+        .div-3~p {
+            color: aqua;
+            background-color: black;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-1">
+        <p>This is first paragraph indide div 1</p>
+        <p>This is second paragraph indide div 1</p>
+        <p>This is third paragraph indide div 1</p>
+        <div>
+            <p>This is div inside div 1</p>
+        </div>
+        <p>This 4th para after div inside div 1</p>
+    </div><br />
+    <div class="div-2">
+        <p>This is first paragraph indide div 2</p>
+        <p>This is second paragraph indide div 2</p>
+        <p>This is third paragraph indide div 2</p>
+        <div>
+            <p>This is div inside div 2</p>
+        </div>
+        <p>This 4th para after div inside div 2</p>
+    </div><br />
+    <br />
+    <section>
+        <p>This is paragrap tag inside the section</p>
+        <div>
+            <p>This is paragrap tag inside the section</p>
+            <h2>this heading tag inside the div</h2>
+        </div>
+        <p>This is paragrap tag inside the section</p>
+    </section>
+    <p>After section paragraph tag 1</p>
+    <p>After section paragraph tag 2</p>
+    <div>
+        This is div tag after section and paragrap tag
+    </div>
+    <p>After div tag paragraph tag 3</p>
+    <br />
+    <div class="div-3">
+        <p>This is first paragraph indide div 3</p>
+    </div>
+    <p>This is 1st paragraph after div 3</p>
+    <p>This is 2nd paragraph after div 3</p>
+    <h2>This is heading after div 3</h2>
+    <p>This is 3rd para after div 3 after heading</p>
+</body>
+
+</html>

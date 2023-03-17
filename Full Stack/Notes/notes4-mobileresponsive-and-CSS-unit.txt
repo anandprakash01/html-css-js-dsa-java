@@ -1,0 +1,51 @@
+Mobile responsive:
+         By using rem/vh/vw units over pixels.
+         By using max-width/max-height.
+         Using CSS Media Queries.
+         Setting up the viewport.
+
+1.we have breakpoints to target the device screen.
+
+2.we need to write media query for following devices:
+
+   (i)phone and mobile - max-width:480px
+   (ii)low resolution tablet and ipad - (min-width:481px) and (max-width:767px)
+   (iii)portrait mode tablet and ipad - (min-width:768px) and (max-width:1024px)
+   (iv)laptop - (min-width:1025px) and (max-width:1280px)
+   (v)extra large screen - (min-width:1281px)
+example:
+@media (max-width:480px){
+
+}  
+3.Browser will take care automatically.
+4.just we need to write breakpoints
+=================================
+CSS Units:
+
+1.px 
+2.em:
+      Font-sizes are inherited relative to the parent element.
+      10em means ten times of the parent element.
+      for padding it will take x times the currunt font size
+
+3.rem:
+      Font-size gets set according to the font-size of the root element.
+      In general, <html> is the root element.
+      In rem, "r" stands for "root."
+      x rem=x times of font size
+
+3.vh:
+      It stands for viewport height.
+      vh is equal to the 1/100 times of the viewport height.
+      Example: Suppose height of the browser is 1000px, so 1vh is equaled to (1/100)*1000= 10px.
+      1vh = 1% of viewport height.
+
+4.vw:
+      It stands for viewport width.
+      Similar to vh, vw is equal to the 1/100 times of the viewport width.
+      Example: Suppose width of the browser is 1000px, so 1vw is equaled to (1/100)*1000= 10px.
+      1vw = 1% of viewport width
+
+5.%:
+
+======================================

@@ -1,0 +1,61 @@
+primitive Datatypes:
+    1.string
+    2.number
+        //everything is number in javascript.
+        //there is no difference between float and integer number.
+    3.boolean
+        true/false
+    4.undefined.
+        empty
+        example:
+        declaration with initialization:
+        var fullName = “akash”;
+        example:
+        declaration
+        var fullName;
+
+derived types:
+        object 
+        array 
+        Object:
+        example:
+        var personAkash = {
+            fullName:"akash",
+            age: 34
+        }
+//inside the object order doesn't matter compiler will take care.
+==================================
+Dynamic Datatypes:
+//Once you assign one variable with one type you can change in later in javascript.
+//To avoid this we need to use another language this is called typescript.
+============================
+JSON:
+//It is one type of data format to transfer
+
+Basic array:
+//It is used to store the data continously.
+//We can store different datatypes together continously.
+//array index always will start from zero.
+syntax:
+[] - array bracket
+Four operation:
+CRUD - create,read,update,delete
+To add element at the end position we need to use push() method
+To remove the element at the end position we need to use pop() method
+push() and pop() will remove one element at a time.
+
+how to find the length of the array.
+array.length
+=================================
+Object:
+CRUD - Create|Read|Update|Delete 
+//position is not matter inside the object only keys 
+//no duplicate keys inside the object.
+=========================
+Array of objects 
+objects of array.
+=======================
+functions:
+//It is used to help to call same function multiple times to get the job done.
+//it helps to avoid duplication in code
+=====================================

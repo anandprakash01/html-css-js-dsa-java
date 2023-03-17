@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            /* this is like global variable */
+            --primary-color:pink;
+            --danger-color:red;
+        }
+        .container{
+            /* this is linke block level variable it can be used only here */
+            --text-color:green;
+            display: flex;
+            justify-content: space-around;
+            color: var(--text-color);
+        }
+        div div{
+            --min-width:300px;
+            height: 200px;
+            width: var(--min-width);
+            background-color: var(--primary-color);
+            border: 2px solid var(--danger-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

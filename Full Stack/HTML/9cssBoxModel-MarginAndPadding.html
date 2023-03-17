@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxModel | Margin | Padding</title>
+    <style>
+        *{
+            /* box-sizing: border-box; will fix the width of box */
+            box-sizing: border-box;
+            margin: 10px;
+            padding: 0px;
+        }
+        body{
+            background-color: #c65bff;
+        }
+        .container{
+            background-color: rgb(202, 149, 255);
+            border: 5px solid red;
+            border-radius: 10px;
+
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+
+            margin: 10px 10px 10px 10px;
+            /* we can set like this also margin: y(top/bottom) x(left/right); */
+            margin: 20px 10px;
+
+            padding-top: 25px;
+            padding-right: 25px;
+            padding-bottom: 25px;
+            padding-left: 25px;
+
+            /* padding: top right bottom left; */
+            padding: 25px 25px 25px 25px;
+            /* we can set like this also padding: y(top/bottom) x(left/right); */
+            padding: 20px 20px;
+
+            width:500px;
+            /* height: 250px;
+            box-sizing: border-box; */
+        }
+    </style>
+</head>
+<body>
+    <h1>Margin | Border | Padding</h1>
+    <div class="container">
+        <p>In CSS, the term "box model" is used when talking about design and layout.
+            The CSS box model is essentially a box that wraps around every HTML element.
+            It consists of: margins, borders, padding, and the actual content.
+        </p>
+    </div>
+    <div class="container">
+        <p>Explanation of the different parts:
+            <ul>
+                <li>Content - The content of the box, where text and images appear</li>
+                <li>Padding - Clears an area around the content. The padding is transparent</li>
+                <li>Border - A border that goes around the padding and content</li>
+                <li>Margin - Clears an area outside the border. The margin is transparent</li>
+            </ul>
+        </p>
+    </div>
+    <div class="container">
+        <p>Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. 
+            To calculate the full size of an element, you must also add padding, borders and margins.
+        </p>
+        <p>The total width of an element should be calculated like this:<br>
+            Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+            <br>The total height of an element should be calculated like this:
+            <br>Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+        </p>
+    </div>
+</body>
+</html>

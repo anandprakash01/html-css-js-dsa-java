@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element Selector</title>
+    <style>
+
+        .before::before{
+            content: 'Welcome ';
+            font-size: 20px;
+            color: blue;
+            font-weight: bold;
+        }
+        .after::after{
+            content: '...';
+            font-size: 20px;
+            color:red;
+            font-weight: bold;
+        }
+        .slct::selection{
+            background-color: pink;
+            color:red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <p class="before">to programming language</p>
+    <p class="before">to javascript language</p>
+    <p class="before">to css language</p>
+    <br/>
+    <p class="after">Anand Prakash</p>
+    <p class="after">Anand Prakash</p>
+    <p class="after">Anand Prakash</p>
+    <br/>
+    <p class="slct">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur velit voluptates vero ipsa aliquam nobis reiciendis ut suscipit delectus quos.</p>
+    <p class="slct">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur velit voluptates vero ipsa aliquam nobis reiciendis ut suscipit delectus quos.</p>
+
+    
+</body>
+</html>

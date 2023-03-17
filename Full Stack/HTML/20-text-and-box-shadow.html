@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow</title>
+    <style>
+        .one-color {
+            /* first is for x and second is for y */
+            text-shadow: 1px 2px green;
+        }
+        .multi-color {
+            text-shadow: 1px 2px green, 2px 3px indigo, 3px 4px orange;
+        }
+        .blur {
+            /* 3rd one that is 5px is for blur */
+            text-shadow: 1px 2px 5px indigo;
+        }
+        .container {
+            display: flex;
+        }
+        .box{
+            margin: 20px;
+            width: 200px;
+            height: 100px;
+            background-color: grey;
+            box-shadow: 5px 4px gold;
+            /* box-shadow: -5px -4px gold; */
+            /* negative will reverse the property to left and up default it is right and down*/
+        }
+        .box-inset {
+            margin: 20px;
+            width: 200px;
+            height: 100px;
+            background-color: grey;
+            /* inset will give shadow inside the box */
+            box-shadow: 5px 4px 10px gold inset;
+            box-shadow: inset 5px 4px 10px gold;
+            
+        }
+        .box-multicolor {
+            margin: 20px;
+            width: 200px;
+            height: 100px;
+            background-color: grey;
+            box-shadow: 5px 4px gold, 10px 15px green, 15px 20px red, 25px 30px grey, 30px 35px orange;
+        }
+        .box-last {
+            margin: 20px;
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* box-shadow: offset-x offset-y color; */
+            /* box-shadow: offset-x offset-y blur-radius color; */
+            /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+            box-shadow: 3px 3px 10px red;
+            /* 3rd is for blur and 4th is for spread radius this will tell the how much it should spread */
+            box-shadow: 5px 5px 10px 5px green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="one-color">Welcome to Javascript</h1>
+    <h1 class="multi-color">Welcome to Javascript</h1>
+    <h1 class="blur">Welcome to Javascript</h1>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box-inset"></div>
+        <div class="box-multicolor"></div>
+        <div class="box-last"></div>
+    </div>
+</body>
+
+</html>

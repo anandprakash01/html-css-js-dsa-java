@@ -1,0 +1,39 @@
+Javascript:
+1.scripting language
+//line by line execution is called scripting language.
+2.lightweight language 
+//it will consume less memory space
+3.prototype based language 
+//it is similar to object (like in java properties and methods)
+
+======================================
+string:
+"hello world" ---->right 
+'hello world' ----->right
+'hello world" -----> wrong 
+"hello world' ---->wrong
+
+===========================
+How to run the javascript inside the browser.
+Two ways to run javascript:
+1.internal 
+2.external
+
+//always preferable to write external javascript inside the head tag.
+
+=============================
+
+Variables inside the javascript:
+//variables is nothing but it will create address for us.
+how to create variable:
+var fullName 
+var lastName 
+var age 
+var details 
+var address 
+= assignment operator - whatever is there on the right hand side it is going to assing on left hand side.
+example:
+var fullName = "akash";
+=========================
+console.log(""); terminal to check realtime output of javascript.
+=======================

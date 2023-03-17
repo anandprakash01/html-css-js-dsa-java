@@ -1,0 +1,35 @@
+
+Ternary operator:
+It is going to provide two condition:
+    statement ? yes condition : no condition 
+        false conditions:
+            0
+            ""
+            ''
+            false 
+            undefind
+            null 
+            NaN
+===============================
+Control flow:
+Decision making statment:
+if else
+switch 
+=============================
+Looping 
+for
+while 
+do while 
+
+statement:
+continue 
+break;
+================================
+array looping:
+forEach
+for of
+for in
+map
+filter
+reduce
+=============================

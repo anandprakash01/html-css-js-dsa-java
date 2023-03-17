@@ -1,0 +1,53 @@
+<script>
+    console.log(this);
+    console.log(this.document);//it will access the whole html document
+</script>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p id="demo">Hello world</p>
+    <p id="demo">Hello js</p>
+
+    <ul>
+        <li>Pen</li>
+        <li>Pencil</li>
+        <li id="list">Eraser</li>
+    </ul>
+
+    <img id="img" />
+
+    <p id="color">Hello world</p>
+    
+    
+    <script>
+        var input = document.getElementById("demo");
+        console.log(input);
+        console.log(input.innerHTML);
+        input.innerHTML = "welcome";
+    </script>
+    <script>
+        var input = document.getElementById("list");
+        document.getElementById("list").innerHTML = "ink";
+    </script>
+    <!-- image setting -->
+    <script>
+        var input = document.getElementById("img");
+        input.src = "./download.png";
+    </script>
+</body>
+<!-- setting color -->
+<script>
+    var input = document.getElementById("color");
+    input.style.color = "red";
+    input.style.fontSize = "44px";
+    input.style.border = "4px solid red";
+    input.style.marginTop = "50px";
+</script>
+
+
+</html>

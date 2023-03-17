@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float | Clear</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap">
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        h2{ 
+            font-family:'Satisfy', cursive;
+            color:rgba(0, 56, 224,0.5);
+            /* margin-top: 5px;
+            margin-bottom: 10px; */
+            /* width:100px;
+            border: 5px solid red;
+            margin:auto; */
+            text-align: center;
+        }
+        .container{
+            width:909px;
+            border: 3px solid gray;
+            border-radius: 10px;
+            margin: auto;
+            background-color: rgb(142, 255, 212);
+            
+        }
+        .item{
+            border: 3px solid rgb(0, 87, 75);
+            border-radius: 10px;
+            margin:20px 3px;
+            padding: 5px 20px;
+            background-color: rgb(173, 159, 252);
+            
+        }
+        .para{
+            text-align: right;
+            text-align: justify;
+        }
+
+        #fruit{
+            width: 49%;
+            float: left;
+        }
+        #computer{
+            width: 49%;
+            float: right;
+        }
+        #mobile{
+            width: 100%;
+            clear:left;
+            clear:right;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="fruit" class="item">
+            <h2>Fruit</h2>
+            <p id="para1" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, magni et, deserunt inventore vero maiores enim amet suscipit reprehenderit ex nesciunt sunt facere culpa consequuntur ea. Sapiente corporis consectetur provident, officia saepe quae ea tempora, labore recusandae doloribus eligendi et veritatis vel est sequi deleniti expedita tempore beatae minima facere?</p>
+        </div>
+            
+        <div id="computer" class="item">
+            <h2>Computer</h2>
+            <p id="para2" class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto et ea ipsa saepe nesciunt quam pariatur ipsum assumenda repellat deleniti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eveniet rerum numquam quis saepe libero officia ad aut tempore quas quo, maiores repellat laudantium adipisci. Hic quas ab assumenda aperiam obcaecati consectetur neque, tenetur ducimus nesciunt iste ipsa debitis nobis ex soluta similique iure, maiores reprehenderit modi quasi fuga. Doloribus!</p>
+        </div>
+
+        <div id="mobile" class="item">
+            <h2>Moblie</h2>
+        <p id="para3" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci reprehenderit exercitationem temporibus est voluptates at, inventore distinctio commodi? Repudiandae, sunt dignissimos numquam eaque itaque natus vitae unde minus? Consequuntur, distinctio praesentium architecto quia illo hic labore laborum obcaecati fugiat magnam voluptate eius. Eos vel consectetur impedit. Dolorum delectus incidunt odit!</p>
+        </div>
+    </div>
+</body>
+</html>

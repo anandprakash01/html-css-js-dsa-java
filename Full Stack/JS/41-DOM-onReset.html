@@ -1,0 +1,24 @@
+<html>
+
+<head>
+
+<body>
+    <form onReset="onResetHandler()">
+        FullName:<input type="text" name="fullName" />
+        <br /> <br />
+        Age:<input type="number" name="age" />
+        <div id="errorAge"></div>
+        <br /> <br />
+        <button type="submit" value="submit">Submit</button>
+        <button type="reset" value="reset">Reset</button>
+    </form>
+</body>
+<script>
+    function onResetHandler() {
+        alert("Are you sure to clear all data");
+        //it will stop further event of form tag.going to action attribute and finding the next page
+    }
+</script>
+</head>
+
+</html>

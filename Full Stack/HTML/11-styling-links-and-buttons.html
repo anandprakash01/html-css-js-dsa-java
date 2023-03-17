@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Links | Buttons</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container {
+            border: 3px solid #97704d;
+            border-radius: 10px;
+            background-color: #e1a1a1;
+            width: 50%;
+            margin: 20px auto;
+            padding: 15px 20px;
+        }
+        a{
+            /* It will remove underline in link */
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(129, 9, 9);
+            background-color: rgb(77, 77, 160);
+        }
+        a:visited{
+            color: yellow;
+        }
+        a:active{
+            color: rgb(0, 80, 0);
+            background-color: yellow;
+        }
+        .btn{
+            background-color: #f565ff;
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            border-radius: 20px;
+            padding: 8px;
+            cursor:pointer;
+            color: #a54d00;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>This is heading</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquam, cupiditate expedita fuga temporibus, error natus veritatis accusamus vitae amet itaque nisi? Fugiat ducimus est, consectetur sit odit illo praesentium voluptatibus possimus aut, perferendis, magni cum nostrum. Repellat vel labore adipisci, incidunt iure, ipsum eligendi explicabo modi nihil voluptates sapiente.
+        </p>
+        <a href="#hr" class="btn">Read more</a>
+        <button class="btn">Contact us</button>
+    </div>
+    
+</body>
+</html>

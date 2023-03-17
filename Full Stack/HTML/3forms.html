@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forms</title>
+</head>
+                    <!-- Notes -->
+
+<!-- To get the information from the user. we have to use form tag. -->
+    <!-- input tag attributes:
+    input tag has self closing-- eg. <imput/>
+
+            1.type==:
+                    radio - any one selection from multiple selection 
+                            //name and value attribute is mandatory to use 
+                    checkbox - for more than one selection we need checkbox.
+
+                    submit - to create submit button
+                        //use value attribute to change name of button.
+            
+            2.name==: this attribute is must to take data from html to javascript.
+                    //always use lowercamelcase letter 
+                    example:fullName,companyDetails,addressInfo 
+            3.value==: to provide default value           
+-->
+
+<body>
+    <h2 align="center">HTML Form</h2>
+
+    <form action="backend.php">
+        <label for="name">Name:</label>
+        <div>
+            <input type="text" name="MyName" id="name" required/>
+        </div>
+        <br>
+        <div>
+            Role:<input type="text" name="MyRole"/>
+        </div><br>
+
+        <div>
+            Email:<input type="eamil" name="MyEmail"/>
+        </div><br>
+
+        <div>
+            Password:<input type="password" name="MyPassword">
+        </div><br>
+        <div>
+            Date:<input type="date" name="MyDate" id="">
+        </div><br>
+        <div>
+            Pin Code:<input type="number" name="MyPincode" id="pincode">
+        </div><br>
+        <div>
+            Are you Eligible ? <input type="checkbox" name="MyEligibility" checked>
+        </div><br>
+            Preferred city:
+            <br/>
+            <br/>
+            <input type="checkbox" name="chennai" value="chennai"/>chennai
+            <br/>   
+            <br/>
+            <input type="checkbox" name="noida" value="noida"/>noida 
+            <br/>
+            <br/>
+            <input type="checkbox" name="delhi" value="delhi"/>delhi
+            <br/>
+            <br/>
+        <div>
+            Upload a file: <input type="file" name="Myfile">
+        </div><br>
+        <div>
+            Gender:
+            Male<input type="radio" name="MyGender">
+            Female<input type="radio" name="MyGender">
+        </div><br>
+
+        <!-- Select tag:
+            //we can use in two ways.
+            1.from hundreds of list we can select 
+                only one similar to radio button.
+             -->
+        <div>
+            <label for="car">Car:</label>
+            <select name="Mycar" id="car">
+                <option value="" selected>--select a car--</option>
+                <option value="Bu">Bugati</option>
+                <option value="lembo" >Lemborgini</option>
+                <option value="Mac" >Maclaren</option>
+            </select>
+        </div><br>
+        <!-- 2.from hundres of lists we can select more than one item simlar to checkbox -->
+        Cities: <select name="city" multiple size="2">
+            <option value="kochi">Kochi</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="noida">Noida</option>
+            <option value="delhi">Delhi</option>
+        </select>
+        <br/>
+        <br/>
+
+        <div>
+            Write about youself:<br>
+            <textarea name="MyText" cols=50 rows="10">Tell somethig about youself</textarea>
+        </div><br>
+
+        slider:<input type="range" name="slider" min="10" value="10" max="100"/>
+            <br/>
+            <br/>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div><br>
+
+        <!-- Image in button -->
+        <input type="image" src="./button.png" width="150" height="150"/>
+
+        gihub url:<input type="url" name="github" tabindex="2"/>
+            <br/>
+            <br/>
+
+    </form>
+
+    Browsers:<input type="text" list="browser" name="browser"/>
+    <datalist id="browser">
+        <option value="firefox"/>
+        <option value="chrome"/>
+        <option value="ID"/>
+    </datalist>
+    <br>
+    <input type="submit"  value="Register"/>
+
+    <!-- marktag -->
+
+    <h1>My name is <mark>Anand</mark></h1>
+
+
+    <dl>
+        <dt>Apple</dt>
+        <dd>It is good for health</dd>
+        <dt>Mongo</dt>
+        <dd>It is tastly</dd>
+        <dt>Orange</dt>
+        <dd>It is good for digestion</dd>
+    </dl>
+</body>
+
+</html>

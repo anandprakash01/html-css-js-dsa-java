@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes selectors</title>
+    <style>
+        /* General attributes selector */
+        li[id]{
+            color: red;
+        }
+        input[type]{
+            border:3px solid green;
+        }
+        /* attribute with matching value selector */
+        li[id="two"]{
+            color: violet;
+        }
+        input[name="password"]{
+            border: 3px solid yellow;
+        }
+
+        /* attribute with starting value */
+        li[id^="ac"]{
+            color: pink;
+        }
+        /* attribute with ending value */
+        li[id$="ac"]{
+            color: green;
+        }
+        /* attribute anywhere matching value */
+        li[id*="ac"]{
+            color: rgb(131, 75, 1);
+        }
+        /* attribute selector with pipe symbol - (|) */
+        p[class|="six"]{
+            color: yellowgreen;
+        }
+        /* attribute selector with tilde symbol (~) */
+        li[id~="ac"]{
+            color: aqua;
+        }
+        
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Pen</li>
+        <li id="one">Pencil</li>
+        <li id="two">Sharpner</li>
+    </ol>
+    <form>
+        FullName:<input type="text" name="fullName"/>
+        <br/><br/>
+        Email:<input type="email" name="email"/>
+        <br/><br/>
+        password:<input type="password" name="password"/>
+    </form>
+    <ol>
+        <li id="oneeac">Pen</li>
+        <li id="ac-room">Pencil</li>
+        <li id="twoo">Sharpner</li>
+        <li id="ac-lag">Eraser</li>
+        <li id="box-ac">Box</li>
+        <li id="acdetails-ac">ink</li>
+    </ol>
+    <p class="six-th-anand">attribute selector with pipe symbol</p>
+    <p class="sixs">attribute selector with pipe symbol</p>
+    <p class="six-anything">attribute selector with pipe symbol</p>
+
+    <ol>
+        <li id="one">pen</li>
+        <li id="ac-room">pencil</li>
+        <li id="two ac">sharpner</li>
+        <li  id="ac-lag">Eraser</li>
+        <li id="box-ac">Box</li>
+        <li id="acde ac tails-ac">ink</li>
+    </ol>
+</body>
+
+</html>

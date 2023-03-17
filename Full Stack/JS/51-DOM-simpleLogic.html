@@ -1,0 +1,44 @@
+<script>
+    var list = [{
+        id: 123,
+        amount: 4000,
+        name: "laptop"
+    }, {
+        id: 124,
+        amount: 5000,
+        name: "laptop"
+    },
+    {
+        id: 125,
+        amount: 6000,
+        name: "laptop"
+    }];
+    var selectedDetails = [123, 124];
+    //please give final output
+    //you need to send unselected data to backend
+    // //[{
+    //     id:123,
+    //     amount:5000,
+    //     name:"laptop"
+    // },
+   //];
+    function send(){
+        var result = [];
+        for (var listitem of list) {
+            // if (selectedDetails.indexOf(listitem.id) > 0) {
+            //     result.push(listitem);
+            // }
+            if(!selectedDetails.includes(listitem.id)){
+                result.push(listitem);
+            }
+        }
+        return result;
+    }
+    console.log(send());
+</script>
+
+<script>
+    // if (-1) {
+    //     alert("yes")
+    // }
+</script>

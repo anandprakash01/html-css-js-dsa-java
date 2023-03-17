@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+
+<body>
+    <div id="parent">
+        <button id="child">submit</button>
+    </div>
+    <script>
+
+        document.getElementById('child').addEventListener('click', childHandler);
+        document.getElementById('parent').addEventListener('click', parentHandler, true);
+        // inside parent we have 3 parameter if true then only it will start from parent
+        //event capturing will become true and event bubbling will become false
+        function parentHandler(event) {
+            console.log("parent");
+            //  event.stopPropagation();
+        }
+        function childHandler(event) {
+            console.log("child");
+            // event.stopPropagation();
+        }
+        //parent to child
+    </script>
+
+</body>
+
+</html>
