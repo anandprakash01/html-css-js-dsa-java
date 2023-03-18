@@ -1,0 +1,135 @@
+<script>
+  // this -> object
+  // this -> inside the function
+
+  /*----------------  1. Implicit Binding    ------------*/
+
+  const user = {
+    name: "Agastha",
+    age: 27,
+    greet() {
+      console.log(this.age);
+    },
+    mother: {
+      name: "Stacey",
+      greet() {
+        console.log(this.name);
+      },
+    },
+  };
+  user.greet();
+  user.mother.greet();
+
+  /*----------------  2. Explicit Binding    ------------*/
+
+  console.log(" 2. Explicit Binding ");
+  user.greet.call(user.mother);//can not do this
+
+  function print() {
+    console.log("Hello", this);
+  }
+  const anand = {
+    Name: "hr",
+    age: 25,
+  }
+  const amu = {
+    Name: "amu",
+    age: 5,
+  }
+  print.call(anand);
+  print.call(amu);
+
+  function greet(city) {
+    console.log("Name", this.name);
+    console.log("Age", this.age);
+    console.log("City", city);
+  }
+  const user1 = {
+    name: "Agastha",
+    age: 27,
+  };
+  const parent = {
+    name: "Christie",
+    age: 55,
+  };
+
+  const args = ["Hyderabad", "India", "Help"];
+  //first argument will be object for "this" keyword
+  //we can use call or apply
+  //when we use apply we dont have to use spred operator
+  // greet.call(user1, ...args);
+  // greet.apply(user1, args);
+
+  const newGreet = greet.bind(parent);
+  const anotherGreet = greet.bind(user1);
+
+  newGreet();     // this  -> parent
+  anotherGreet(); // this  -> user
+
+  const arijit = {
+    name: "Arijit Singh",
+    sing() {
+      console.log(`${this.name} can sing`);
+    },
+  };
+
+  const mohit = {
+    name: "Mohit chauhan",
+  };
+  //can use arijits method to mohit using call
+  arijit.sing.call(mohit);
+
+  /*----------------  3. new binding    ------------*/
+
+
+  /*----------------  4. lexical (arrow function) binding    ------------*/
+
+//arrow function always borrow this from their immidiate parent
+  const object = {
+    id: 1,
+    name: "Deadpool",
+    greet: function () {
+      const grandparent = () => {
+        const parent = () => {
+          const child = () => {
+            console.log(this);
+          };
+
+          child();
+        };
+        parent();
+
+      };
+
+      grandparent();
+
+    },
+  };
+
+  object.greet();
+
+  /*----------------  5. window binding    ------------*/
+  
+
+  function sayAge() {
+    console.log("The age is", this);
+  }
+
+  sayAge.call([1, 2, 3]);
+
+  //Polyfills
+
+
+  const array = [1, 2, 3, 4];
+  // console.log(Math.max(...array));
+  console.log(Math.max.apply(this,array));//because in 'apply' method first argument will always be this ka object.
+
+  // function myMap() { }
+
+  // const newArray = array.myMap((number) => number * 2);
+
+  // const newArray2 = array.map((number) => number * 2);
+
+  // console.log(newArray);
+
+</script>

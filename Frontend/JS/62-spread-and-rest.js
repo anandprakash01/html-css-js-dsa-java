@@ -5,19 +5,13 @@
 
 const first = ["A", "B"];
 const second = ["D", "E"];
+//it will spread the array 
 const copyArray = [...second, "F", "G", 1, ...second];
 console.log("Copied Array", copyArray);
 
 var one = [4, 5];
 var two = [5, 6];
 var list = [one, two];
-console.log(list);
-
-//it will spread the array 
-//... spread operator
-var one = [4, 5];
-var two = [5, 6];
-var list = [...one, ...two];//this will make the only one whole array
 console.log(list);
 
 // spread in new copied Array;
@@ -138,46 +132,44 @@ const result3 = sum(1, 2, 3, 4);
 console.log(result3);
 
 
+/*---------------Destructuring---------------*/
 
-////////
-// Destructuring
-// Object Destructuring
-// const object = {
-//   state: "Telangana",
-//   country: "India",
-//   president: 560,
-// };
+//object destructuring
 
+const object = {
+  state: "Telangana",
+  country: "India",
+  president: 560,
+};
+
+//other ways
 // let city = object.city;
 // if (!city) {
 //   city = "Hyderabad";
 // }
-
 // const city = object.city ? object.city : "Hyderabad";
+//const city = object.city || "Hyderabad";
 
-// const city = object.city || "Hyderabad";
+const { city = "Hyderabad" } = object;
+console.log(city);
 
-// const { city = "Hyderabad" } = object;
+//Array Destructuring
 
-// Array Destructuring
-
-// const student = ["Aditya", 0, "Dancing"];
+const student = ["Aditya", 0, "Dancing"];
 // userName
 // score
 // hobby
 
 // const {} = object; -> Object Destructuring
 
-// const [userName, score, hobby] = student;
-
-// console.log(userName, score, hobby);
+const [userName, score, hobby] = student;
+console.log(userName, score, hobby);
 
 // const userName = student[0];
 // const score = student[1];
 // const hobby = student[2];
 
-// const emojis = ["🔥", "😈", "🚀"];
-
+const emojis = ["🔥", "😈", "🚀"];
 // fire
 // devil
 // rocket
@@ -188,5 +180,5 @@ console.log(result3);
 // const rocket = emojis[2];
 
 // NEW WAY!! :D
-// const [fire, , rocket] = emojis;
-// console.log(fire, rocket);
+const [fire, , rocket] = emojis;
+console.log(fire, rocket);
