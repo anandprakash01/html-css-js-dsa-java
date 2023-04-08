@@ -1,0 +1,26 @@
+<script>
+
+    // "Everything in javaScript happens inside a excution Context"
+
+    // Global Excution context is created in 2 phases:
+    // 1: Creation Phase(Memory Creation Phase);
+    // 2: Code Excution Phase;
+
+    printName();//calling before creation
+    console.log(printName);
+    console.log(a);
+
+    var a = 10;
+    function printName() {
+        console.log("Anand Prakash")
+    }
+
+    console.log(printName);
+
+    console.log(x);//arrow fun behaves like a variable in hoisting
+    
+    var x = () => {
+        console.log("Hello")
+    }
+
+</script>

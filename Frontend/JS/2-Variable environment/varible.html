@@ -1,0 +1,19 @@
+<script>
+    var x=1;
+    a();
+    b();
+    console.log(x);
+
+    function a(){
+        var x=10;
+        //this this will be created only in VRIABLE ENVIRONMENT of this function's excution context 
+        console.log(x);
+    }
+    function b(){
+        var x=100;
+        console.log(x);
+    }
+
+    console.log(x);
+
+</script>

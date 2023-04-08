@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        Array.prototype.includesOneof = (arr) => {
+            // if (!arr[0]) {
+            //     return false;
+            // }
+            if (Array.isArray(arr[0])) {
+                for (let num of arr) {
+                    for (let obj of this) {
+                        if (num.every((element, i) => { element != obj[i] })) {
+                            return false;
+                        }
+                    }
+                }
+                return true;
+            }
+            else if (typeof arr[0] == 'object') {
+                for (let obj of this) {
+                    if (JSON.stringify(obj) == JSON.stringify(arr[0])) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            else {
+                for (let num of this) {
+                    // if(this.contains(num)){
+                    //     return true;
+                    // }
+                    if (arr.every((element) => { element != num })) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Javascript Prototypes</h1>
+    <h3>Define a method on the Array constructor called includesOneof which accepts an array as a parameter. It will
+        return true or false based on if an array contains one or more than one of the elements provided in the
+        parameter array.
+        <br />
+        As a result of this we should be able to access something like:<br />
+        const arr=[1, 2, 3, 4, 5, 6]<br />
+        arr. includesOneof([2, 8, 10]) ==>true<br />
+        arr. includesOneof([10, 11, 12])=>false<br />
+        arr. includesOneof([])=> Always false<br />
+
+        const arr2 = [{name:'James Bond",code":'OO7"},{name:"Edward Donne",code:"OO1"}]<br />
+        arr2.includesOneof([{name:"James Bond",code:'OO7'}]) ===> true<br />
+        arr2.includesOneof([{name:"James Bond",code:'OO7',organization: 'MI6'}]) ===> false<br />
+
+
+        const arr3 =[[1,22,33,4],[4,55,6,772]];<br />
+        arr3.includesOneof([[1,22,33,4]]) ===> true<br />
+        arr3.includesOneof([[1,33,22,4]]) ===> false<br />
+
+        Acceptance criteria<br />
+        Should compare array and arrays by values<br />
+        Should handle integer, Decimal,String, Array,Object values<br />
+
+        Should handle empty arrays<br />
+
+        Arrays and objects should be compared by values<br />
+
+
+        NOTE: All the elements of any array will be of the same type. For example if the first element of the array is
+        of type Object then all the elements of that array will be of type Object .
+
+        Also you have to compare objects by values if the array contains objects
+    </h3>
+</body>
+
+</html>

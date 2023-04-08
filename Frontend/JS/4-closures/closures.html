@@ -1,0 +1,32 @@
+<script>
+
+    function outer(){
+        let a=10;
+        function inner(){
+            console.log(a);
+        }
+        a=5;
+        return inner;
+    }
+    // outer()();
+    const ex=outer();
+    console.log(ex);
+    x();
+
+    function x(){
+        let a="x-function";
+        function y(){
+            let b="y-function";
+            function z(){
+                let c="z-function";
+                console.log(a,b,c);
+            }
+            return z;
+        }
+        return y;
+    }
+
+    const hr=x()();
+    console.log(hr);
+    hr();
+</script>

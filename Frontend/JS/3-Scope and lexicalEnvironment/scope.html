@@ -1,0 +1,22 @@
+<script>
+    function a(){
+        console.log(x);
+    }
+    
+    var x="😊";
+    a();
+
+    function nothing(){
+        var emoji="☯️";
+        
+        function a(){
+            console.log(x);
+            console.log(emoji);
+        }
+        a();
+    }
+    nothing();
+    // console.log(emoji);
+    // emoji is only in nothing scope its not in this scope ie.Global
+
+</script>

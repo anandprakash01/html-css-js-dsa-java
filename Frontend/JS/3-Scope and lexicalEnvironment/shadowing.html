@@ -1,0 +1,46 @@
+<script>
+    let b = 10;
+    const c = "☯️☯️"
+    {
+        let b = 5;
+        var a = 2;
+        const c = 3;
+        console.log("a: ", a);
+        console.log("b: ", b);//this b is shadowing b
+        console.log("c: ", c);
+    }
+    console.log("a: ", a);
+    console.log("b: ", b);
+    console.log("c: ", c);
+    // shadowing behaves the same way in the function also
+
+
+
+    //Illegal shadowing
+
+    let x=10;
+    var y=10;
+    
+    //we can not redeclear a it has been already decleared in upper block
+    // only using var we can redecler it
+    // let a=10;
+    var a=10;
+    {
+        // var x=100; // can not do this because it should not cross the boundary of its scope
+        let x=1000;
+        let y=100;
+        const a=10;
+    }
+
+    const emoji="(❁´◡`❁)";
+    {
+        const emoji="❤️❤️❤️";
+        {
+            const emoji="😉";
+            console.log(emoji);
+        }
+        console.log(emoji);
+    }
+    console.log(emoji);
+
+</script>
