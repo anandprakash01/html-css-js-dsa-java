@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container{
+            display: grid;
+            /* grid-template-columns: 300px 200px 200px; */
+            /* grid-template-columns: 300px auto 200px; */
+
+            grid-template-columns: 1fr 4fr 1fr;
+            /* grid-template-columns: repeat(5, auto); */
+            grid-gap: .5rem;
+
+            grid-template-rows: 1fr 1fr 3fr;
+            grid-auto-rows: 2fr;
+        }
+        .items{
+            /* width: 200px; */
+            /* height: 50px; */
+            /* margin: 10px; */
+            background-color: goldenrod;
+            border: 2px solid red;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="items">this is item-1</div>
+        <div class="items">this is item-2</div>
+        <div class="items">this is item-3</div>
+        <div class="items">this is item-4</div>
+        <div class="items">this is item-5</div>
+        <div class="items">this is item-6</div>
+        <div class="items">this is item-7</div>
+        <div class="items">this is item-8</div>
+        <div class="items">this is item-9</div>
+        <div class="items">this is item-10</div>
+        <div class="items">this is item-11</div>
+        <div class="items">this is item-12</div>
+        <div class="items">this is item-13</div>
+        <div class="items">this is item-14</div>
+        <div class="items">this is item-15</div>
+        <div class="items">this is item-16</div>
+    </div>
+</body>
+</html>
