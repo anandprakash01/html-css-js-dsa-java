@@ -1,0 +1,26 @@
+<script>
+    // -------------Encapsulation/Abstraction-----------------
+
+    const usersalary=(function (){  
+        let salary=50000;
+        function changeBy(amount){
+            salary+=amount;
+        }
+        return {
+            raise: function (){
+                changeBy(5000);
+            },
+            lower: function () {
+                changeBy(-10000);
+            },
+            currentAmount: function (){
+                return salary;
+            }
+        }
+    })();       //Immidiatly Envoked function expression
+
+    console.log(usersalary.currentAmount());
+    usersalary.raise();
+    console.log(usersalary.currentAmount());
+
+</script>
