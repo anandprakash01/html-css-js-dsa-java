@@ -17,10 +17,15 @@
 
     console.log(printName);
 
-    console.log(x);//arrow fun behaves like a variable in hoisting
-    
+    console.log(x);//function expression behaves like a variable in hoisting
+
     var x = () => {
         console.log("Hello")
+    }
+    //we can not call coz the value will be undefined(ie. not a function)
+    console.log(subtraction(3, 4));
+    var subtraction = function (a, b) {
+        return a - b;
     }
 
 </script>

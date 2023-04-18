@@ -1,0 +1,51 @@
+<script>
+
+    // The try statement defines a code block to run (to try).
+    // The catch statement defines a code block to handle any error.
+    // The finally statement defines a code block to run regardless of the result.
+    // The throw statement defines a custom error.
+
+    // The finally statement lets you execute code, after try and catch, regardless of the result:
+    // try {
+    //     Block of code to try
+    // }
+    // catch (err) {
+    //     Block of code to handle errors
+    // }
+    // finally {
+    //     Block of code to be executed regardless of the try / catch result
+    // }
+
+    function add() {
+        try {
+            // let result = a + b;
+            throw new Error("err msg");
+        }
+        catch (err) {
+            console.log(err);
+            console.log(err.name); // Errortype name
+            console.log(err.message);
+            console.log(err.stack);
+        }
+        finally {
+            console.log("finally");
+        }
+        // let result = a+b;
+    }
+    add();
+    console.log("Code is running");
+
+    // Error Name Values:
+    // Six different values can be returned by the error name property:
+
+    // Error Name	        Description
+    // EvalError	    An error has occurred in the eval() function
+    // RangeError	    A number "out of range" has occurred
+    // ReferenceError	An illegal reference has occurred
+    // SyntaxError	    A syntax error has occurred
+    // TypeError	    A type error has occurred
+    // URIError	        An error in encodeURI() has occurred
+
+    //Newer versions of JavaScript do not throw EvalError. Use SyntaxError instead.
+
+</script>

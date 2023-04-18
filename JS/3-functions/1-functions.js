@@ -1,25 +1,20 @@
 
-//funtion Statement or function declaration
+//--------funtion Statement or function declaration-----
 
 function a() {
     console.log("a is called");
 }
+// ------------named function-----------
+function fiboseries(number) {
+    if (number <= 1) return 1;
+    return fiboseries(number - 1) + fiboseries(number - 2);
+}
 
-// function expression
+
+// ----------------function expression------------------
 let b = function () {
     console.log("b is called");
 }
-
-// Anonymous function
-
-//when functions are used as value we use anonymous fun
-let c = function () {
-    console.log("c is called");
-}
-
-a();
-b();
-c();
 // Named function expression
 let d = function xyz() {
     console.log("xyz is called");
@@ -28,13 +23,33 @@ let d = function xyz() {
 // xyz();// error 
 d();
 
+// ----------------Anonymous function-------------------
+// A function without name is called anonymous function.
+// when functions are used as value we use anonymous fun
+const addition = (a, b) => {
+    return a + b;
+}
+var subtraction = function (a, b) {
+    return a + b;
+}
+
+a();
+b();
+addition(2, 3);
+//anonymous function
+//IIFE - immediately invoke function
+(function () {
+    console.log("onload");
+})();
+
+
 // difference b/w Prameter and Arguments?
 // Parameter:- Function defination
 // Arguments:- Function call
 
 // -------------First Class function-----------
-// The ability of function to be used as funtion and can be passed as arguments
-// and can be returned from a funtion this is called as Firstclass funtion
+/* The ability of function to be used as funtion and can be passed as arguments
+and can be returned from a funtion this is called as Firstclass funtion */
 
 //first class citizens
 let e = function (fun) {
