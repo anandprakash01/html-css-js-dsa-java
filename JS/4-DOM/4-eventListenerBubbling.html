@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <style>
+        #parent {
+            width: 800px;
+            height: 800px;
+            background-color: red;
+        }
+
+        #child {
+            width: 400px;
+            height: 400px;
+            background-color: green;
+        }
+
+        #grand-child {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="child">
+            <div id="grand-child"></div>
+        </div>
+    </div>
+    <script>
+        document
+            .getElementById("grand-child")
+            .addEventListener("click", grandchildHandler);
+        document.getElementById("child").addEventListener("click", childHandler);
+        document
+            .getElementById("parent")
+            .addEventListener("click", parentHandler);
+
+        /* 
+          When an event happens on an element, it first runs the handlers on it, 
+          then on its parent, then all the way up on other ancestors.
+          
+          The standard DOM Events describes 3 phases of event propagation:
+            =>Capturing phase – the event goes down to the element.
+            =>Target phase – the event reached the target element.
+            =>Bubbling phase – the event bubbles up from the element.
+        */
+
+        function parentHandler(event) {
+            event.stopPropagation(); //this will stop the event bubbling
+            // not necessary here coz it is outer most.
+            alert("parent");
+        }
+        function childHandler(event) {
+            alert("child");
+            event.stopPropagation();
+        }
+        function grandchildHandler(event) {
+            event.stopPropagation();
+            alert("grandchild");
+        }
+      // flow---> from inside to outside
+      //id grand-child
+      //id child
+      //id parent
+      //body
+      //html
+      //window
+    </script>
+</body>
+
+</html>

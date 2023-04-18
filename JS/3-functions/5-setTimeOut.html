@@ -1,0 +1,27 @@
+<script>
+    // setTimeout --> Alllows us to run the function once after the interval of time
+    // clearTimeout --> Alllows us to run the function repeatedly after the interval of time
+
+    function greet(name, byeText) {
+        console.log("Hello! Good Morning " + name + "😊😉🙌" + byeText);
+    }
+    setTimeout(greet, 1000);
+    // setTimeout(greet(), 12000); --> Wrong as it is calling the function inside setTimeout
+
+    timeOut = setTimeout(greet, 3000, "Anand", "Take Care");
+    // after first 2 arguments all arg will be for the cb fun.
+    // return Timeout id
+
+    console.log(timeOut);
+
+    // clearTimeout(timeOut);
+
+    intervalId = setInterval(greet, 3000, "Anand", "CU");
+    // clearInterval(intervalId);
+
+    function displayTime() {
+        time = new Date();
+        console.log(time);
+    }
+    // setInterval(displayTime, 1000);
+</script>

@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .container div {
+            width: 100px;
+            height: 50px;
+            font-size: 25px;
+        }
+
+        .box-even {
+            background-color: green;
+            padding-top: 28px;
+            margin: 1px;
+        }
+
+        .box-odd {
+            background-color: gray;
+            padding-top: 28px;
+            margin: 1px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-wrapper">
+        Enter the number : <input type="number" id="inputOne" />
+        <button onClick="onSubmit()">Submit</button>
+    </div>
+    <div class="container" id="container-box">
+
+    </div>
+    <script>
+        var count = 1;
+        function onSubmit() {
+            var parent = document.getElementById("container-box");
+            var input = Number(document.getElementById("inputOne").value);
+            console.log(input, typeof input);
+            for (let i = 1; i <= input; i++) {
+                var tag = document.createElement("div");
+                var text = document.createTextNode(count);
+                if (count % 2 == 0) {
+                    tag.classList.add("box-even");
+                } else {
+                    tag.classList.add("box-odd");
+                }
+                tag.appendChild(text);
+                parent.appendChild(tag);
+                count++;
+            }
+        }
+    </script>
+</body>
+
+</html>
