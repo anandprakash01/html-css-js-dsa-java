@@ -1,0 +1,73 @@
+<script>
+
+  // Object.create is like inheritance
+  // properties of parent will be prototype for the child which is created from object.create
+  function Person(name, age) {
+    // this = Object.create(Person.prototype)
+    this.name = name;
+    this.age = age;
+    // return this;
+  }
+
+  Person.prototype.work = function () {
+    console.log(`${this.name} is working`);
+  };
+
+  Person.prototype.sleep = function () {
+    console.log(`${this.name} is sleeping`);
+  };
+
+  class Person {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    work() {
+      console.log(`${this.name} is working`);
+    }
+
+    sleep() {
+      console.log(`${this.name} is sleeping`);
+    }
+  }
+
+  const mikasa = new Person("Mikasa", 25);
+  mikasa.sleep();
+  Array.prototype.myMap = function (cb) {
+    const result = [];
+    const arrayToLoop = this;
+    for (let i = 0; i < arrayToLoop.length; i++) {
+      const element = arrayToLoop[i];
+      const returnedValue = cb(element);
+      result.push(returnedValue);
+    }
+    return result;
+  };
+
+  const parent = {
+    id: 1,
+    name: "Dad",
+    score: 100,
+  };
+
+  // [[Prototype]]
+
+  // const child = Object.create(parent)
+
+  // const child = {
+  //   __proto__: parent,
+  // };
+
+  // console.log(child.name);
+
+  const child = {
+    id: 2,
+    score: 50,
+  };
+  Object.setPrototypeOf(child, parent);
+  console.log(child);
+
+  console.log(typeof null);
+
+</script>

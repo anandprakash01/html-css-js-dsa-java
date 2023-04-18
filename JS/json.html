@@ -1,0 +1,19 @@
+<script>
+
+    let obj = {
+        name: "Anand",
+        fvColor: "black",
+        no: 9
+    }
+    console.log(obj);
+    //JSON.stringify --> it will convert the entire object data to json string format
+    //JSON.Parse --> it will convert json string to javascript object.
+    let jsonStr = JSON.stringify(obj);
+    console.log(typeof jsonStr, jsonStr);
+
+    let newStr = jsonStr.replace("Anand", "Prakash");
+
+    let newobj = JSON.parse(newStr);
+    console.log(newobj);
+
+</script>

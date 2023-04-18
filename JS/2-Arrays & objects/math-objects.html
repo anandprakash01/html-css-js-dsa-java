@@ -1,0 +1,44 @@
+<script>
+    let m = Math;
+    console.log(m);
+
+    // Constants from Math object
+    console.log("Value of Math.E is,", Math.E); //euler's number
+    console.log("Value of Math.PI is,", Math.PI);
+    console.log("Value of Math.LN10 is,", Math.LN10);
+    console.log("Value of Math.LN2 is,", Math.LN2);
+    console.log("Value of Math.SQRT1_2 is,", Math.SQRT1_2);
+    console.log("Value of Math.LOG2E is,", Math.LOG2E);
+
+    // Functions from Math object
+    let a = 23.499;
+    let b = 23.7;
+    let x = -10;
+    console.log(Math.abs(x));
+    console.log("value of a and b is ", a, b);
+    console.log("Math.ceil of a and b is ", Math.ceil(a), Math.ceil(b));//round up value
+    console.log("Math.floor of a and b is ", Math.floor(a), Math.floor(b));//round down
+    console.log("Math.round of a and b is ", Math.round(a), Math.round(b));
+    console.log("Math.sqrt of 10 is ", Math.sqrt(10));
+    console.log("Math.pow of 2 to power 3 is ", Math.pow(2, 3));
+
+    // Trinonometric Functions
+    console.log("The value of sin(pi) is ", Math.sin(Math.PI / 2))
+    console.log("The value of tan(pi) is ", Math.tan(Math.PI / 2))
+    console.log("The value of cos(pi) is ", Math.cos(Math.PI / 2))
+
+    // Min and max functions
+    console.log("Minimum value of 4, 5, 6 is ", Math.min(4, 5, 6));
+    console.log("Maximum value of 4, 5, 6 is ", Math.max(4, 5, 6));
+
+    // Generating a random number
+    let r = Math.random();// 0-1
+    // Random number b/w (a, b) = a + (b-a)*Math.random()
+    let a1 = 50;
+    let b1 = 60;
+    let r50_60 = a1 + (b1 - a1) * Math.random();
+    console.log("The random number is ", r)
+    console.log("The random number is ", r50_60)
+
+
+</script>
