@@ -1,7 +1,9 @@
-#include<iostream>
+#include <iostream>
 // using namespace std;
-int main(){
+int main()
+{
     int n;
-    std:: cin>>n;
-    std:: cout<<"No is "<<n;
+    std::cin >> n;
+    std::cout << "No is " << n;
+    std::cout << "\nHello word";
 }

@@ -11,17 +11,24 @@
     timeOut = setTimeout(greet, 3000, "Anand", "Take Care");
     // after first 2 arguments all arg will be for the cb fun.
     // return Timeout id
-
     console.log(timeOut);
-
     // clearTimeout(timeOut);
 
     intervalId = setInterval(greet, 3000, "Anand", "CU");
-    // clearInterval(intervalId);
+    clearInterval(intervalId);
 
     function displayTime() {
         time = new Date();
         console.log(time);
     }
     // setInterval(displayTime, 1000);
+
+
+    //this will loop till 10 sec
+    let startTime = new Date().getTime();
+    let endTime = startTime;
+    while (endTime < startTime + 10000) {
+        endTime = new Date().getTime();
+    }
+
 </script>

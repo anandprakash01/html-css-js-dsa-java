@@ -5,6 +5,8 @@ public class LinkedList {
     public Node head;
     public Node tail;
     public int size;
+    public Integer next;
+
     public void addFirst(int data){
         Node newNode=new Node(data);
         size++;

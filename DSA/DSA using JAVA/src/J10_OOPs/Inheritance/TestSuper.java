@@ -2,25 +2,24 @@ package J10_OOPs.Inheritance;
 
 class Area{
     private int length;
-    int breadth;
+    int width;
 //    Area(){
 //    }
-
-    public Area(int length, int breadth){
+    public Area(int length, int width){
         this.length = length;
-        this.breadth = breadth;
+        this.width = width;
     }
 
     public int calcArea(){
-        return length * breadth;
+        return length * width;
     }
 }
 
 class Volume extends Area{  //single level inheritance(re-usability)
     private int height;
 
-    Volume(int length, int breadth, int height){
-        super(length, breadth);
+    Volume(int length, int width, int height){
+        super(length, width);
         this.height = height;
     }
 

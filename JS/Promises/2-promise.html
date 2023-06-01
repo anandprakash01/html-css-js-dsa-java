@@ -1,0 +1,35 @@
+<script>
+    /*
+        A promise is simpley an oblect
+        --It can be in three stages
+            Pending
+            Fullfilled
+            Rejected
+        
+    */
+    const promise = new Promise((resolve, reject) => {
+        // asynchronous code
+        // setTimeout
+        // network calls
+        setTimeout(() => {
+            resolve("text message if it is resolved");
+            // reject("error happend");
+        }, 3000);
+    })
+    console.log(promise);   //pending
+
+    setTimeout(() => {
+        console.log(promise)//fulfilled
+    }, 4000);
+
+
+    // after the success of promise
+    // it is called immediatly after the promise is resolved
+    promise.then((msg) => {
+        console.log("promise resolved .then() ", msg);
+    })
+        .catch((err) => {
+            console.log("error");
+        });
+
+</script>

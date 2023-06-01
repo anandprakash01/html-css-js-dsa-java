@@ -28,46 +28,46 @@ public class StackUsingQueues2 {
                 System.out.println("Stack is Empty");
                 return -1;
             }
-            int top=-1;
+            int front=-1;
             if(!q1.isEmpty()){
                 while(!q1.isEmpty()){
-                    top=q1.remove();
+                    front=q1.remove();
                     if(q1.isEmpty()){
                         break;
                     }
-                    q2.add(top);
+                    q2.add(front);
                 }
             }
             else{
                 while(!q2.isEmpty()){
-                    top=q2.remove();
+                    front=q2.remove();
                     if(q2.isEmpty()){
                         break;
                     }
-                    q1.add(top);
+                    q1.add(front);
                 }
             }
-            return top;
+            return front;
         }
         int peek(){
             if(isEmpty()){
                 System.out.println("Stack is Empty");
                 return -1;
             }
-            int top=-1;
+            int front=-1;
             if(!q1.isEmpty()){
                 while(!q1.isEmpty()){
-                    top=q1.remove();
-                    q2.add(top);
+                    front=q1.remove();
+                    q2.add(front);
                 }
             }
             else{
                 while(!q2.isEmpty()){
-                    top=q2.remove();
-                    q1.add(top);
+                    front=q2.remove();
+                    q1.add(front);
                 }
             }
-            return top;
+            return front;
         }
     }
 

@@ -2,8 +2,8 @@ package J10_OOPs.Encapsulation;
 
 class Student{
     //wrapping up data & methods under a single unit; it also implements data hiding
-    private int rollNo;
     private String name;
+    private int rollNo;
     private int age;
     Student(){
         System.out.println("A new Student is Registered");
@@ -15,19 +15,16 @@ class Student{
         this.age = age;
     }
 
-    public void setRollNo(int rollNo){
-        this.rollNo = rollNo;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
+    // setters
+    public void setName(String name) {this.name = name;}
+    public void setRollNo(int rollNo){this.rollNo = rollNo;}
     public void setAge(int age) {
         if(age > 0)
             this.age = age;
         else
             System.out.println("Age cannot be Negative!!!");
     }
-
+    // getters
     public int getRollNo(){
         return rollNo;
     }
@@ -40,8 +37,8 @@ class Student{
 
     public void printDetails(){
         System.out.println("Details are: ");
-        System.out.println("Roll No: " + this.rollNo);
         System.out.println("Name: " + this.name);
+        System.out.println("Roll No: " + this.rollNo);
         System.out.println("Age: " + this.age);
     }
 }

@@ -1,15 +1,13 @@
 
 //--------funtion Statement or function declaration-----
-
 function a() {
     console.log("a is called");
 }
-// ------------named function-----------
+//named function
 function fiboseries(number) {
     if (number <= 1) return 1;
     return fiboseries(number - 1) + fiboseries(number - 2);
 }
-
 
 // ----------------function expression------------------
 let b = function () {

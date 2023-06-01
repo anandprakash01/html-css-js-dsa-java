@@ -6,22 +6,26 @@ class Animal{
         System.out.println("Eating....");
     }
 }
-class Dog extends Animal{ // this is single level inheritance
+class Dog extends Animal{
+    // this is single level inheritance
     int legs;
     void bark(){
         System.out.println("Barking...");
     }
 }
-class Puppy extends Dog{    // this is multilevel inheritance coz we are deriving class from derived class
+class Puppy extends Dog{
+    // this is multilevel inheritance coz we are deriving class from derived class
         void color(){
         System.out.println("Black");
     }
 }
-class Cat extends Animal{// this is hierarchical inheritance coz multiple derived class with only one base class
+class Cat extends Animal{
+    // this is hierarchical inheritance coz multiple derived class with only one base class
     void meau(){
         System.out.println("meeaaauuu...");
     }
 }
+
 public class Inharitance {
     public static void main(String[] args){
         Animal A=new Animal();// parent class object

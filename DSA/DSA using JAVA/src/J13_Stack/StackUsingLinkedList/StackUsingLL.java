@@ -1,63 +1,63 @@
 package J13_Stack.StackUsingLinkedList;
 
-class Stack{
-    class Node{
-        public int data;
-        Node next;
-        Node(int data){
-            this.data=data;
-            //this.next=null;
-        }
-    }
 
-    Node head;
-    boolean isEmpty(){
-        return head==null;
-    }
-
-    void print(){
-        if(head==null){
-            System.out.println("Error..!! Stack is Empty");
-            return;
-        }
-        Node temp=head;
-        while(temp!=null){
-            System.out.print(temp.data+" ");
-            temp=temp.next;
-        }
-        System.out.println();
-    }
-
-    void push(int data){    //O(1)
-        Node newNode=new Node(data);
-        if(isEmpty()){
-            head=newNode;
-            return;
-        }
-        newNode.next=head;
-        head=newNode;
-    }
-
-    int pop(){      // O(1)
-        if(isEmpty()){
-            System.out.println("Error...Stack is Empty.Can not pop");
-            return -1;
-        }
-        int val=head.data;
-        head=head.next;
-        return val;
-    }
-
-    int peek(){     // O(1)
-        if(isEmpty()){
-            System.out.println("Error...Stack is Empty.Can not pop");
-            return -1;
-        }
-        return head.data;
-    }
-}
 public class StackUsingLL {
+    static class Stack{
+        class Node{
+            public int data;
+            Node next;
+            Node(int data){
+                this.data=data;
+                //this.next=null;
+            }
+        }
 
+        Node head;
+        boolean isEmpty(){
+            return head==null;
+        }
+
+        void print(){
+            if(head==null){
+                System.out.println("Error..!! Stack is Empty");
+                return;
+            }
+            Node temp=head;
+            while(temp!=null){
+                System.out.print(temp.data+" ");
+                temp=temp.next;
+            }
+            System.out.println();
+        }
+
+        void push(int data){    //O(1)
+            Node newNode=new Node(data);
+            if(isEmpty()){
+                head=newNode;
+                return;
+            }
+            newNode.next=head;
+            head=newNode;
+        }
+
+        int pop(){      // O(1)
+            if(isEmpty()){
+                System.out.println("Error...Stack is Empty.Can not pop");
+                return -1;
+            }
+            int val=head.data;
+            head=head.next;
+            return val;
+        }
+
+        int peek(){     // O(1)
+            if(isEmpty()){
+                System.out.println("Error...Stack is Empty.Can not pop");
+                return -1;
+            }
+            return head.data;
+        }
+    }
     public static void main(String[] args){
         Stack s=new Stack();
         Stack s1=new Stack();

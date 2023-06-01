@@ -25,6 +25,9 @@ class Queue{
         if(front==-1){//if first element is added
             front=0;
         }
+//        if(isEmpty()){//front=-1
+//            front++;//front=0;
+//        }
         rear=(rear+1)%size;
         q[rear]=data;
     }

@@ -3,29 +3,25 @@ package J10_OOPs.Polymorphism;
 /*      Compile time polymorphism --->    Overloading(Static)
         Run time Polymorphism     --->    Overriding(Dynamic)
 */
-
 class Vehicle{
     String name;
     String color;
-
     public Vehicle() {}
-
-    void breaks(){
-        System.out.println("Breaks applied");
-    }
-
+    void breaks(){System.out.println("Breaks applied");}
 }
+
 class Bike extends Vehicle{
     int prize;
-    void breaks(){  //Overriding method
-        System.out.println("Disk breaks");
-    }
+    String oil;
+    //Overriding method
+    void breaks(){System.out.println("Disk breaks");}
 }
+
 class Aeroplane extends Vehicle{
-    void breaks(){  //Overriding method
-        System.out.println("Hydro-lic breaks");
-    }
+    //Overriding method
+    void breaks(){System.out.println("Hydro-lic breaks");}
 }
+
 public class RunTime_Overriding {
 
     public static void main(String[] args){
@@ -35,11 +31,13 @@ public class RunTime_Overriding {
         //  Object of parent class--->  reference of child class
         Vehicle v2=new Bike();
         v2.breaks();
-        //v2.petrol();//can not access this coz this is an object of vehicle,and it does not have this method
+//        System.out.println(v2.oil);
+        // can not access this coz this is an object of vehicle,and it does not have oil
         Vehicle v3=new Aeroplane();
         v3.breaks();
 
         Bike b=new Bike();
         b.breaks();
+        System.out.println(b.oil);
     }
 }

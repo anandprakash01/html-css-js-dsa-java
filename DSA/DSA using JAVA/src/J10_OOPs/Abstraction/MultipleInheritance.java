@@ -17,7 +17,10 @@ interface Mother extends GrandMother{
     void eat();
     void cookTasty();
 }
+
+// multiple inheritance using implements(interface)
 class Child extends GrandFather implements Father,Mother{
+
     public void eat(){
         System.out.println("Eats");
     }

@@ -3,37 +3,33 @@ package J10_OOPs.Polymorphism;
         Compile time polymorphism --->    Overloading(static)
         Run time Polymorphism     --->    Overriding(Dynamic)
 */
-class Area{
-    private int length;
-    int breadth;
-    //Constructor Overloading
-    Area(){}
-    Area(int x){}
-    Area(float y){}
-    public Area(int length, int breadth){
-        this.length = length;
-        this.breadth = breadth;
-    }
-    //method Overloading
+class Calculator{
+    int val1;
+    int val2;
 
-    public int calcArea(int length,int breadth){  //rectangle
-        return length * breadth;
+    //Constructor Overloading
+    Calculator(){}
+    Calculator(int a,int b){
+        this.val1=a;
+        this.val2=b;
     }
-    int calcArea(int a){    //Square
-        return a*a;
+
+    //method Overloading
+    int sum(int a,int b){
+        return a+b;
     }
-    float calcArea(float r){    //circle
-        return (float)(Math.PI * r * r);
+    int sum(int a,int b,int c){
+        return a+b+c;
+    }
+    float sum(float a,float b){
+        return a+b;
     }
 
 }
 public class CompileTime_Overloading {
     public static void main(String[] args){
-        Area circle= new Area();
-        Area squre= new Area();
-        float area=circle.calcArea( (float)4 );
-        int squreArea=squre.calcArea(4);
-        System.out.println(area);
-        System.out.println(squreArea);
+        Calculator calc=new Calculator();
+        System.out.println(calc.sum(4,5));
+        System.out.println(calc.sum(4.5f,5.5f));
     }
 }
