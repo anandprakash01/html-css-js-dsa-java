@@ -3,7 +3,7 @@ package J14_Queue.QueueUsingStack;
 import java.util.Stack;
 
 public class QueueUsingStack1 {
-        //implementing add in O(n) and remove in O(1)
+        //implementing add in O(n) and peek/remove in O(1)
     static class Queue{
         Stack<Integer> s1=new Stack<>();
         Stack<Integer> s2=new Stack<>();

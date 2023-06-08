@@ -13,7 +13,7 @@ public class QueueUsingJCF {
 
         q.remove();
         q.remove();
-        System.out.println(q);
+        System.out.println(q);  // Direct Print
         System.out.println(q.isEmpty());
         System.out.println(q.size());
 
