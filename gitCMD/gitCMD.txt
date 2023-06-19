@@ -1,3 +1,9 @@
+git setup:
+        install git and setup account
+        git config --global user.name "username"
+        git config --global user.email "userEmail"
+        git config --list --show-origin --show-scope
+
 github : clone
         git clone (Repository link)
 
@@ -5,6 +11,7 @@ github : getting latest code
         git pull
 
 github : push
+        git add --a
         git commit -m "Comment"
         git push
 =================================================================
