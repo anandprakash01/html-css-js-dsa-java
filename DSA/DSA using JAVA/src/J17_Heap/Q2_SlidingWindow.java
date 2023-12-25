@@ -1,6 +1,6 @@
 package J17_Heap;
 
-public class Q1 {
+public class Q2_SlidingWindow {
     // sum of every kth window;
     public static void main(String[] args) {
         int arr[] = { 1, 2, 4, 8, -1, 3, 4 };

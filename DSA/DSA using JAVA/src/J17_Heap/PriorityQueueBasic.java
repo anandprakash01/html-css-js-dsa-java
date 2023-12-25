@@ -17,7 +17,6 @@ public class PriorityQueueBasic {
         public int compareTo(Student s){
 //            return this.rank-s.rank;  // according to rank
             return s.rank- this.rank;   // according to rank in reverse order
-
         }
     }
 
@@ -32,7 +31,7 @@ public class PriorityQueueBasic {
 
         System.out.println(pq);
 
-        // Highest priority element will be on front
+        // Highest priority element will be on front other ele can be in any order
         
         while(!pq.isEmpty()){
             System.out.print(pq.peek()+" ");
@@ -46,7 +45,7 @@ public class PriorityQueueBasic {
         pqStudent.add(new Student("praveen",3));
 
         while(!pqStudent.isEmpty()){
-            System.out.println(pqStudent.peek().name+"---> "+pqStudent.peek().rank);
+            System.out.println(pqStudent.peek().name+" ---> "+pqStudent.peek().rank);
             pqStudent.remove();
         }
 

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class HeapUsingArrayList {
 
     static class Heap{
+        // or we can use priorityQueue same like this
         ArrayList<Integer> list=new ArrayList<>();
 
         public void add(int data){
@@ -13,7 +14,7 @@ public class HeapUsingArrayList {
             int parent=(child-1)/2;     // parent index
 
             // fix heap (min heap)
-            while(parent>=0 && list.get(child) < list.get(parent)){
+            while(parent>=0 && list.get(child) < list.get(parent)){// O(log n)
                 //swap
                 int temp=list.get(child);
                 list.set(child,list.get(parent));
@@ -50,7 +51,7 @@ public class HeapUsingArrayList {
             return data;
 
         }
-        private void heapify(int i){
+        private void heapify(int i){// i is root index   O(log n)
             int left=2*i +1;
             int right=2*i +2;
             int minIdx=i;
@@ -66,13 +67,13 @@ public class HeapUsingArrayList {
                 list.set(i,list.get(minIdx));
                 list.set(minIdx,temp);
 
-                heapify(minIdx);
+                heapify(minIdx);//to fix node which has changed
             }
 
         }
 
     }
-    public static void main(String[] arga){
+    public static void main(String[] args){
         Heap h=new Heap();
         h.add(2);
         h.add(3);
@@ -80,7 +81,6 @@ public class HeapUsingArrayList {
         h.add(5);
 
         h.print();
-
 
 
     }

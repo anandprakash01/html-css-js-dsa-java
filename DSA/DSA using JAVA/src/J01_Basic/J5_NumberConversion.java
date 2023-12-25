@@ -17,7 +17,7 @@ public class J5_NumberConversion {
 
     public static int DesimalToBinary(int a){
 
-                    /*this will only give u the 1's
+                    /* this will only give u the 1's
                 if no if totally divisible by 2
                 because if u add remender 0 to result it will
                 always be 0 till remender 1 is come */

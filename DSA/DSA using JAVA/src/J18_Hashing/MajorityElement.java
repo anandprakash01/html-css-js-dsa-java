@@ -18,6 +18,5 @@ public class MajorityElement {
                 System.out.println(key);
             }
         }
-
     }
 }
