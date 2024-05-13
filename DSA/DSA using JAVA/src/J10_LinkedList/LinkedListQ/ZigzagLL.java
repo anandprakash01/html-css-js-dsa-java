@@ -1,8 +1,8 @@
 package J10_LinkedList.LinkedListQ;
 
 
-import J10_LinkedList.LinkedList;
-import J10_LinkedList.Node;
+import J10_LinkedList.CreateLinkedList.LinkedList;
+import J10_LinkedList.CreateLinkedList.Node;
 
 public class ZigzagLL {
     // first node then last, then second and second last------------

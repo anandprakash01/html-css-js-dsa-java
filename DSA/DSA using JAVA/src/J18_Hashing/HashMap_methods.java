@@ -1,5 +1,6 @@
 package J18_Hashing;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class HashMap_methods {
@@ -37,5 +38,25 @@ public class HashMap_methods {
         for(Map.Entry<Character,String> x : map.entrySet()){
             System.out.println(x.getKey() +" -> "+ x.getValue());
         }
+
+        // using iterators
+        Iterator<Map.Entry<Character, String>> itr = map.entrySet().iterator();
+        while(itr.hasNext()){
+            Map.Entry<Character, String> entry = itr.next();
+            System.out.println("Key = " + entry.getKey() +
+                    ", Value = " + entry.getValue());
+        }
+
+        // forEach(action) method to iterate map
+        map.forEach((k,v) -> System.out.println("Key = "
+                + k + ", Value = " + v));
+
+
+        // looping over keys 
+        for (Character key : map.keySet()){
+            String val = map.get(key);
+            System.out.println("Key = " + key + ", Value = " + val);
+        }
+
     }
 }

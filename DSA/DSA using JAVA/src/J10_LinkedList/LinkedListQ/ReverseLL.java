@@ -1,8 +1,8 @@
 package J10_LinkedList.LinkedListQ;
 
 //to extends these classes we need to import these classes also
-import J10_LinkedList.LinkedList;
-import J10_LinkedList.Node;
+import J10_LinkedList.CreateLinkedList.LinkedList;
+import J10_LinkedList.CreateLinkedList.Node;
 
 public class ReverseLL {
     public static void main(String[] args){

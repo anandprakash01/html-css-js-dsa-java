@@ -1,27 +1,52 @@
 package J10_LinkedList;
 
+
+import J10_LinkedList.CreateLinkedList.LinkedList;
+import J10_LinkedList.CreateLinkedList.Node;
+
 public class J1_MergeTwoSortedList {
     public static void main(String[] args){
-        if(list1==null) return list2;
-        if(list2==null) return list1;
-        ListNode ans=new ListNode(-1);
-        ListNode temp=ans;
+        LinkedList list1=new LinkedList();
+        LinkedList list2=new LinkedList();
+        list1.addLast(1);
+        list1.addLast(2);
+        list1.addLast(4);
 
-        while(list1!=null || list2!=null){
-            int data1= list1!=null? list1.val:101;
-            int data2= list2!=null? list2.val:101;
-            if(data1<=data2 && list1!=null){
-                temp.next=new ListNode(data1);
-                list1=list1.next;
+        list2.addLast(1);
+        list2.addLast(3);
+        list2.addLast(4);
+
+        if(list1==null){
+            list2.print();
+            return;
+        }
+        if(list2==null){
+            list1.print();
+            return;
+        }
+        Node head1=list1.head;
+        Node head2=list2.head;
+
+        LinkedList ans=new LinkedList();
+        ans.addLast(-1);
+        Node temp=ans.head;
+
+        while(head1!=null || head2!=null){
+            int val1= head1!=null? head1.data:101;//101 beacause the value is between 0-100
+            int val2= head2!=null? head2.data:101;
+            if(val1<=val2 && head1!=null){
+                temp.next=new Node(val1);
+                head1=head1.next;
             }
-            else if(data1>data2 && list2!=null){
-                temp.next=new ListNode(data2);
-                list2=list2.next;
+            else if(val1>val2 && head2!=null){
+                temp.next=new Node(val2);
+                head2=head2.next;
             }
             temp=temp.next;
 
         }
-        return ans.next;
+        ans.print();
+        return;
 
         // while(list1!=null && list2!=null){
         //     if(list1.val<list2.val){
