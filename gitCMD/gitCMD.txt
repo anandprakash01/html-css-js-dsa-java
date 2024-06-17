@@ -14,6 +14,17 @@ github : push
         git add --a
         git commit -m "Comment"
         git push
+
+make folder a git repo
+	git init
+	git add --a / git add .
+	git commit -m "comment"
+	
+	git remote add origin https://github.com/anandprakash01/anand.git
+	git branch -M main
+	git push -u origin main
+
+// github renamed the master branch to main branch
 =================================================================
 git status                      //to check currunt status
 git init                        //to make folder a git Repository
