@@ -4,6 +4,7 @@ server - it is also one system that is running 24/7
 HTML:hyper text markup language 
 language - set of rules. we need to follow that rules.
 markup - <>
+
 text - information 
 hyper - link - that is connecting from one page to another page. 
 html - it is use to display the content 
