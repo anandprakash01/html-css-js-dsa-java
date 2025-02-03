@@ -37,6 +37,7 @@ public class G10_DikshtraAlgo {
         boolean visit[] = new boolean[graph.length];
         PriorityQueue<Pair> pq = new PriorityQueue<>();
         pq.add(new Pair(src,0));
+
         while(!pq.isEmpty()){
             Pair curr = pq.remove();
             if(!visit[curr.n]){
@@ -61,6 +62,16 @@ public class G10_DikshtraAlgo {
     }
 
     public static void main(String[] args) {
+          /*                      7
+                          1➡➡➡➡➡➡3
+                      2 ↗ ⬇         ⬆  ↘ 1
+                      ↗   ⬇         ⬆    ↘
+                     0    ⬇ 1     2 ⬆      5
+                      ↘   ⬇         ⬆     ↗
+                     4 ↘  ⬇         ⬆   ↗ 5
+                         2 ➡➡➡➡➡ 4 ↗
+                                3
+         */
         int V = 6;
         ArrayList<Edge>[] graph = new ArrayList[V];
         for(int i=0;i<V;i++){

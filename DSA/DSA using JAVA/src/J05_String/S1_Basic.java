@@ -3,7 +3,7 @@ import java.util.*;
 public class S1_Basic {
     public static void main(String[] args){
         //char a[]={'2','f'};
-        String str="Anand prakash";
+        String str="Anand";
         Scanner sc=new Scanner(System.in);
         String s1=sc.nextLine();
         int len=s1.length();

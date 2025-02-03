@@ -44,6 +44,7 @@ public class G9_All_Paths {
 
         graph[5].add(new Edge(5,0));
         graph[5].add(new Edge(5,2));
+
         printAllPath(graph,src,dest,"");
     }
 }
